@@ -259,8 +259,8 @@ const BAYOU_BENDS: CourseDef = {
 
     { len: 26, checkpoint: true, width: 13 },
     { len: 20, drop: 4, flow: 3.4, width: 11 },
-    { len: 26, width: 15, flow: 1.6, items: [{ kind: 'whirlpool', at: 9, d: -3.6, pull: 11.5 }, { kind: 'mine', at: 14, d: 1.2 }, { kind: 'whirlpool', at: 19, d: 3.6, swirl: -5, pull: 11.5 }] },
-    { len: 30, turn: 50, width: 12, left: 'spikes', items: [{ kind: 'current', at: 4, push: -4.5, len: 14 }, { kind: 'mace', at: 23, amp: 3.6, period: 2.9 }] },
+    { len: 28, width: 16, flow: 1.6, items: [{ kind: 'whirlpool', at: 8, d: -4, pull: 10.5 }, { kind: 'mine', at: 14, d: -6 }, { kind: 'whirlpool', at: 21, d: 4, swirl: -5, pull: 10.5 }] },
+    { len: 30, turn: 50, width: 15, left: 'spikes', items: [{ kind: 'current', at: 4, push: -3.8, len: 14 }, { kind: 'mace', at: 23, amp: 3.2, period: 3.6 }] },
     { len: 22, width: 12, items: [{ kind: 'kelp', at: 0, len: 8 }, { kind: 'fence', at: 13, gap: 5.5, amp: 2.6, period: 5 }] },
     { len: 18, width: 13, items: [{ kind: 'boost', at: 6 }] },
     { len: 10, finish: true, width: 16, flow: 1.2 },

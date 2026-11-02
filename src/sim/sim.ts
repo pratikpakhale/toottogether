@@ -31,6 +31,7 @@ import {
   RAFT_RESTITUTION,
   RESPAWN_AHEAD_OF_CHECKPOINT,
   RESPAWN_GRACE,
+  RESPAWN_MIN_TRAVEL,
   SLOPE_GRAVITY,
   SNIPE_WINDOW,
   SPIKE_REACH,
@@ -348,6 +349,9 @@ export class Sim {
     if (!p || p.raft === null) return 'Hop on a raft first.'
     const raft = this.rafts[p.raft]
     if (this.phase === 'finished' || this.phase === 'countdown' || raft.result !== RAFT_RESULT.none) return 'No respawning right now.'
+    // A raft that hasn't left the spot it would respawn at gains nothing but a death on the tally.
+    const spot = raft.cp >= 0 ? this.course.checkpoints[raft.cp] + RESPAWN_AHEAD_OF_CHECKPOINT : this.course.spawnS
+    if (raft.s < spot + RESPAWN_MIN_TRAVEL) return raft.cp >= 0 ? "You're already at the checkpoint." : "You're already at the start."
     if (raft.state === RAFT_STATE.float) this.kill(p.raft, 'reset')
     return null
   }

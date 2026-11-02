@@ -84,6 +84,20 @@ describe('sim', () => {
     expect(Math.abs(raft.s - (course.checkpoints[0] + RESPAWN_AHEAD_OF_CHECKPOINT))).toBeLessThan(2)
   })
 
+  it('respawn does nothing until the raft has left its respawn spot', () => {
+    const sim = new Sim(course, 1)
+    sim.addPlayer(1, 'A', 0)
+    sim.phase = 'racing'
+    const raft = sim.rafts[0]
+    raft.cp = 0
+    raft.s = course.checkpoints[0] + RESPAWN_AHEAD_OF_CHECKPOINT + 1
+    expect(sim.requestRespawn(1)).not.toBeNull()
+    expect(raft.deaths).toBe(0)
+    raft.s = course.checkpoints[0] + 40
+    expect(sim.requestRespawn(1)).toBeNull()
+    expect(raft.deaths).toBe(1)
+  })
+
   it('burst counter baseline never fires a burst on join', () => {
     const sim = new Sim(course, 1)
     sim.addPlayer(1, 'A', 0)

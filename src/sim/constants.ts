@@ -45,6 +45,8 @@ export const POP_DURATION = 1.7
 export const FALL_DURATION = 1.5
 export const RESPAWN_GRACE = 0.9
 export const RESPAWN_AHEAD_OF_CHECKPOINT = 12
+/** How far past its respawn spot a raft must get before Respawn does anything (m). */
+export const RESPAWN_MIN_TRAVEL = 6
 export const FALL_GRAVITY = 26
 
 export const PICKUP_RESPAWN = 22

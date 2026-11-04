@@ -312,7 +312,7 @@ const FROSTBITE_FALLS: CourseDef = {
     },
 
     { len: 26, checkpoint: true, width: 12 },
-    { len: 30, ice: true, width: 12, items: [{ kind: 'sweeper', at: 8, side: 1, len: 7.5, swing: 72, period: 3.8 }, { kind: 'sweeper', at: 22, side: -1, len: 7.5, swing: 72, period: 3.8 }] },
+    { len: 30, width: 12, items: [{ kind: 'sweeper', at: 8, side: 1, len: 7.5, swing: 72, period: 3.8 }, { kind: 'sweeper', at: 22, side: -1, len: 7.5, swing: 72, period: 3.8 }] },
     { len: 30, turn: 50, ice: true, left: 'spikes', width: 12, items: [{ kind: 'geyser', at: 10, d: 2.2, period: 3.4 }, { kind: 'rock', at: 20, d: -1, r: 1 }] },
     { len: 24, width: 12, items: [{ kind: 'fence', at: 8, gap: 5.5, amp: 3, period: 5 }, { kind: 'fence', at: 18, gap: 5.5, amp: 3, period: 5, phase: 0.5 }] },
     { len: 22, width: 13, items: [{ kind: 'mace', at: 11, amp: 4, period: 2.7 }] },

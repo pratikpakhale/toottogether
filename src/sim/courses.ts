@@ -196,8 +196,8 @@ const VOLCANO_PEAK: CourseDef = {
     { len: 28, turn: -50, items: [{ kind: 'mace', at: 14, amp: 4, period: 3.4 }] },
 
     { len: 28, checkpoint: true, width: 12 },
-    { len: 26, ice: true, left: 'open', right: 'open', width: 11, flow: 1.4, items: [{ kind: 'piston', at: 13, d: 0, period: 3.2, r: 1.3 }] },
-    { len: 30, turn: 55, ice: true, left: 'open', right: 'open', width: 11, items: [{ kind: 'mine', at: 10, d: 1.8 }, { kind: 'mine', at: 21, d: -1.8 }] },
+    { len: 26, left: 'open', right: 'open', width: 11, flow: 1.4, items: [{ kind: 'piston', at: 13, d: 0, period: 3.2, r: 1.3 }] },
+    { len: 30, turn: 55, left: 'open', right: 'open', width: 11, items: [{ kind: 'mine', at: 10, d: 1.8 }, { kind: 'mine', at: 21, d: -1.8 }] },
     {
       len: 24,
       turn: -40,
